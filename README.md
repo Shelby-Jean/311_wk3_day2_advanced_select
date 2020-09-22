@@ -36,7 +36,7 @@ SELECT SUBSTRING(phone1,1,3) as AreaCode, COUNT(user_id) FROM usersContact GROUP
 
 3. Find the MIN first_name, the county, and a count of all users in that county for counties with more than 10 users. There will be four results. List the last one. 
   * Hint: MIN, COUNT, JOIN, GROUP BY, HAVING
-SELECT MIN(users.first_name), usersAddress.county, COUNT(users.first_name) FROM users JOIN usersAddress ON users.id=usersAddress.id GROUP BY county HAVING COUNT(usersAddress.county) > 10;
+SELECT MIN(users.first_name), usersAddress.county, COUNT(users.first_name) FROM users JOIN usersAddress ON users.id=usersAddress.user_id GROUP BY county HAVING COUNT(usersAddress.county) > 10;
 
 
 ## Query Responses
